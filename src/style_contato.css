@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: "Sour Gummy", sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.7rem, 2dvh, 2.5rem);
+    color: rgb(55, 2, 7);
+}
+
+#pinto {
+    top: 0;
+    position: absolute;
+    max-width: 2rem;
+    height: auto;
+    z-index: -1;
+    animation: descer 5s ease-out infinite;
+}
+
+#chuva {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.pintos {
+    top: 0;
+    position: absolute;
+    max-width: 2rem;
+    height: auto;
+    z-index: -1;
+    animation: descer 3s ;
+}
+
+@keyframes descer {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.9;
+    }
+
+    80% {
+        opacity: 0.25;
+    }
+
+    100% {
+        transform: translateY(90vh) rotate(361deg);
+        opacity: 0;
+        
+    }
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(250deg, rgb(255, 148, 0), rgb(254, 147, 94), rgb(176, 233, 176));
+    background-size: 500%;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    overflow: auto;
+    animation: gradiente 5s ease-in infinite alternate;
+    
+    
+}
+
+
+
+@keyframes gradiente {
+    0% {
+        background-position: 10% 50%;
+    }
+
+    50% {
+        background-position: 50% 90%;
+    }
+
+    100% {
+        background-position: 90% 10%;
+    }
+}
+.card_principal {
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    border: solid 2px rgb(55, 2, 7);
+    background-color: rgba(254, 201, 66, 0.884);
+    width: clamp(12rem, 95vw, 24rem);
+    height: clamp(27rem, 90vh, 40rem);
+    box-shadow: 0px 0px 10px 8px rgba(31, 26, 48, 0.142);
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+   padding: 0.7rem;
+    
+}
+
+.content {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: clamp(7rem, 35dvw, 20rem);
+    flex-wrap: wrap;
+   
+}
+
+.card_principal a {
+    height: 1.3rem;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+.content span {
+    
+    text-decoration: none;
+    color: #bd4d0d;
+    overflow-wrap: break-word;
+    
+}
+
+.content img {
+    position: absolute;
+    left: 1rem;
+    width: 1rem;
+    height: auto;
+    
+    
+}
+
+
+
+.texto {
+    padding-left: 2rem;
+    margin: auto 1.2rem;
+    border-radius: 10px;
+    place-items: center;
+    list-style: none;
+    width: 90%;
+    padding-bottom: 2rem;
+    
+}
+
+
+.pezinho {
+    position:absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 1%;
+    
+}
+
+.pezinho h6{
+    font-size: 0.7rem;
+}
